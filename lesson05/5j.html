@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5j</title>
+</head>
+<body>
+    
+    <script>
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+  <body>
+    <!-- show the quantity -->
+    <button onclick="
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity++;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Add to cart</button>
+
+    <button onclick="
+      cartQuantity+=2;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+2</button>
+
+    <button onclick="
+      cartQuantity+=3;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+"   >+3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset');
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+
+    <button onclick="
+        cartQuantity+=4;
+        console.log(`Cart quantity ${cartQuantity}`)
+    ">+4</button>
+    <button onclick="
+        cartQuantity+=5;
+        console.log(`Cart quantity ${cartQuantity}`)
+"   >+5</button>
+
+    <!-- remove from cart -->
+    <button onclick="
+        cartQuantity--;
+        console.log(`Cart Quantity ${cartQuantity}`);
+    ">Remove from Cart</button>
+
+    <!-- add two more buttons to decrease quantity by 2 and 3 -->
+    <button onclick="
+        cartQuantity-=2;
+        console.log(`Cart Quantity ${cartQuantity}`);
+    ">-2</button>
+
+    <button onclick="
+        cartQuantity-=4;
+        console.log(`Cart Quantity ${cartQuantity}`);
+    ">-4</button>
+    <script>
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        displayResult('heads')
+        ">heads</button>
+    <button onclick="
+        displayResult('tails')
+    ">tails</button>
+    <p class="p-text"></p>
+    <script>
+        function displayResult(value)
+        {
+            if (value === 'heads')
+            {
+                document.querySelector('.p-text').innerHTML = `You chose ${value}`;
+            }
+            else if (value === 'tails')
+            {
+                document.querySelector('.p-text').innerHTML = `You chose ${value}`;
+            }
+        }
+    </script>
+</body>
+</html>

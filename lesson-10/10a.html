@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10a</title>
+    <style>
+        .cart-btn
+        {
+            background-color: rgb(255, 216, 20);
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 5px 40px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .added
+        {
+            background-color: rgb(224, 224, 224);
+        }
+    </style>
+</head>
+<body>
+    <button class="cart-btn" onclick="confirmCartAddition()" >
+        Add to Cart
+    </button>
+    <script>
+        function confirmCartAddition()
+        {
+            const buttonElement = document.querySelector('.cart-btn');
+            
+            if (buttonElement.innerHTML =="Add to Cart")
+            {
+                buttonElement.innerHTML = "Added!";
+                buttonElement.classList.add('added');
+            }
+            else
+            {   
+                buttonElement.innerHTML = "Add to Cart";
+                buttonElement.classList.remove('added');
+            }
+        }
+    </script>
+</body>
+</html>

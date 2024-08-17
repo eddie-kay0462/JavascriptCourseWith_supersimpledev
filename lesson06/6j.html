@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6j</title>
+</head>
+<body>
+    <script>
+        const randomNumber = Math.random();
+        let result;
+        let guess = 'heads';
+        // if (randomNumber < 0.5)
+        // {
+        //     result = 'heads';
+        // }
+        // else
+        // {
+        //     result = 'tails';
+        // }
+        result = randomNumber < 0.5 ? 'heads': 'tails';
+
+        // if (guess === result)
+        // {
+        //     console.log('YOU WIN!');
+        // }
+        // else
+        // {
+        //     console.log('YOU LOSE!')
+        // }
+        display =  guess === result ? 'YOU WINNN!!': 'YOU LOOOOSEE!';
+        console.log(display);
+    </script>
+</body>
+</html>

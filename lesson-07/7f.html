@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COnvert to c ot F</title>
+</head>
+<body>
+    <script>
+        //converts from  celsius to fahrenheit
+        function convertToFahrenheit(celsius)
+        {
+            const fahrenheit = (celsius * (9/5)) + 32;
+            return fahrenheit;
+        }
+        //converts from fahrenheit to celsius
+        function convertToCelsius(fahrenheit)
+        {
+            const celsius = (fahrenheit - 32) * (5/9)
+            return celsius;
+        }
+
+        function covertTemperature(degrees, unit)
+        {
+            if (unit === 'C')
+            {
+                const celsius = convertToFahrenheit(degrees);
+                return `${celsius}C`;
+            }
+            else if  (unit === 'F')
+            {
+                const fahrenheit = convertToCelsius(degrees);
+                return `${fahrenheit}F`;
+            }
+        }
+
+        const tempF  =covertTemperature(25, 'C');
+        console.log(tempF);
+        const tempC = covertTemperature(86, 'F');
+        console.log(tempC);
+    </script>
+</body>
+</html>

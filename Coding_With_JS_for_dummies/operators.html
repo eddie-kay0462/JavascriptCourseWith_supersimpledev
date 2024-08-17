@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+</head>
+<body>
+
+    <script>
+        //used cases of the comma operators
+        let a =5;
+        let b= 10;
+        let result = (a+=2, b*=3);
+        console.log(`a = ${a}`);
+        console.log(`b = ${b}`);
+        console.log(`result = ${result}`);
+
+        //the delete operator
+        var animals = ["dog", "cat", "octopus", "bird"];
+        console.log(animals[3]);
+        delete animals[3];
+        console.log(animals[3]); //undefined
+        console.log(typeof animals);
+
+        var myString = new String();
+        if (myString instanceof String)
+        {
+            console.log("yup, its a string");
+        }
+        console.log(typeof myString);
+        let d = 'a';
+        console.log(typeof d);
+    </script>
+</body>
+</html>

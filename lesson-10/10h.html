@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <style>
+        body 
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .subscribe-btn
+        {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        
+        .is-subscribed
+        {
+            background-color:rgb(240, 240, 240);
+            color: black;
+        }
+        .cost-input 
+        {
+            font-size: 15px;
+            padding: 10px;
+        }
+        .calc-btn
+        {
+            background-color: green;
+            border: none;
+            padding: 12px 15px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .display-error
+        {
+            color: red;
+        }
+    </style>
+</head >
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+        subscribe();
+        "class="js-subscribe-button subscribe-btn">Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input type="text" name="" id="" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+        handleCostKeyDown(event);
+    ">
+    <button onclick="
+        calculateTotal();
+    " class="calc-btn">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+
+        function handleCostKeyDown(event)
+        {
+            if (event.key === 'Enter')
+            {
+                calculateTotal();
+            }
+        }
+        function calculateTotal()
+        {
+          const inputElement =   document.querySelector(".js-cost-input");
+          let cost = Number(inputElement.value);
+          
+          
+          if (cost < 40 && cost >=0)
+          {
+            removestyles();
+            cost = cost + 10;
+            document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+          }
+          else if (cost < 0)
+          {
+            document.querySelector(".js-total-cost").innerHTML = "Error: cost cannot be less than $0";
+            if (!document.querySelector('.js-total-cost').classList.contains('display-error'))
+            {
+                document.querySelector('.js-total-cost').classList.add('display-error');
+            }
+          }
+          else
+          {
+            removestyles();
+            document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+          }
+          
+          
+        }
+        function subscribe()
+        {
+            const buttonElement =  (document.querySelector('.js-subscribe-button'));
+          
+            if (buttonElement.innerText === 'Subscribe')
+            {
+                buttonElement.innerHTML = 'Subscribed';
+                //add an extra class
+                buttonElement.classList.add("is-subscribed");
+
+            }
+            else
+            {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove("is-subscribed");
+            }
+       
+        }
+        function removestyles()
+        {
+            const element = document.querySelector('.display-error');
+            if (element)
+            {
+                element.classList.remove('display-error')
+            }
+        }
+    </script>
+  </body>
+</html>
+
+
+ 

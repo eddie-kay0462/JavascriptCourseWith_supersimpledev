@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapt 5</title>
+</head>
+<body>
+    <h1>Wild Birthday Game</h1>
+    <p>
+        <ul>
+            <li>Enter the number 7</li>
+            <li>Multiply by the month of your birth</li>
+            <li>Subtract 1</li>
+            <li>Multiply by 13</li>
+            <li>Add the day of your birth</li>
+            <li>Add 3</li>
+            <li>Multiply by 11</li>
+            <li>Subtract the month of your birth</li>
+            <li>Subtract the day of your birth</li>
+            <li>Divide by 10</li>
+            <li>Add 11</li>
+            <li>Divide by 100</li>
+        </ul>
+    </p>
+
+    <script>
+        // const a  = 1 + ((2*3) + 4);
+        // console.log(a);
+        var numberSeven = Number(prompt('Enter the number 7'));
+        var birthMonth = Number(prompt('Enter your birth month'))
+        var calculation = numberSeven * birthMonth;
+        calculation--;
+        calculation = calculation * 13;
+        var birthday = Number(prompt('Enter the day of your birth'))
+        calculation = calculation + birthday;
+        calculation +=3;
+        calculation*=11;
+        calculation = calculation - birthMonth;
+        calculation = calculation - birthday;
+        calculation /= 10;
+        calculation+=11;
+        calculation /= 100;
+
+        document.write("Your birthday is " + calculation);
+
+        console.log(1&2);
+        
+    </script> 
+</body>
+</html>

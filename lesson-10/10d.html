@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10d</title>
+    <style>
+        .game-btn
+        {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .is-toggle
+        {
+            background-color: rgb(230, 230, 230);
+            color: black;
+           
+        }
+    </style>
+</head>
+<body>
+    <button class="game-btn" onclick="toggle()">Gaming</button>
+    <script>
+        const gameBtn = document.querySelector('.game-btn');
+        function toggle()
+        {
+            if (gameBtn.classList.contains('is-toggle'))
+            {
+                gameBtn.classList.remove('is-toggle');
+            }
+            else
+            {
+                gameBtn.classList.add('is-toggle');
+            }
+        }
+    </script>
+</body>
+</html>

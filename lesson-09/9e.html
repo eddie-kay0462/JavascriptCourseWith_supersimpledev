@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9e</title>
+</head>
+<body>
+    <input type="text" placeholder="Name" class="input-value" onkeydown="
+        displayName(event)
+        ">
+    <button>Submit</button>
+    <p class="p-text"></p>
+    <script>
+        function displayName(event)
+        {
+            const name = document.querySelector('.input-value').value;
+            if (event.key === 'Enter')
+            {
+                document.querySelector('.p-text').innerHTML = `Your name is ${name}`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8d</title>
+</head>
+<body>
+    <script>
+        function comparePrice(product1, product2)
+        {
+            const expensiveProd = product1.price > product2.price ? product2 : product1;
+            return expensiveProd;
+        };
+        const product1 = {
+            name: "Lenevo",
+            price: 230
+        };
+        const product2 = {
+            name: "Vintage Impala",
+            price: 1
+        }
+
+        console.log(`The less expensive product is ${comparePrice(product1, product2).name}`)
+    </script>
+</body>
+</html>

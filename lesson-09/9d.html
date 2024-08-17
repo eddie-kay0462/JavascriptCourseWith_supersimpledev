@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9d</title>
+</head>
+<body>
+    <input type="text" placeholder="Name" class="input-value">
+    <button onclick="
+        displayName()
+    ">Submit</button>
+    <p class="p-text"></p>
+    <script>
+        function displayName()
+        {
+            const name = document.querySelector('.input-value').value;
+            if (name != '')
+            {
+                document.querySelector('.p-text').innerHTML = `Your name is ${name}`;
+            }
+            else
+            {
+                document.querySelector('.p-text').innerHTML = `Enter your name`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+
+</head >
+  <body>
+
+    <script>
+        // const myArray = [10, 20, 30];
+        // console.log(myArray);
+        // console.log(myArray[1]);
+        // myArray[0] = 5;
+        // console.log(myArray);
+
+        // [1, 'hello', true, {name: 'socks'}, [1, 2]]
+        // console.log(typeof [1, 2]);
+        // console.log(Array.isArray([1, 2]));
+
+        // console.log(myArray.length);
+        // //push -->add an element to the end of an array
+        // myArray.push(2);
+        // console.log(myArray);
+
+        // //.splice()-->removes an item from an array syntax splice(index, numOfitemstoremovestrating from index)
+        // myArray.splice(0, 2);
+        // console.log(myArray);
+
+        //Arrays are references
+        const array1 = [1, 2, 3]; //-->array1 is a reference to the array [1, 2, 3]
+        const array2 = array1.slice();  //-->both array1 and array2 point to the same array object
+        array2.push(4);
+        console.log(array1);
+        console.log(array2); //both array1 and array2 are modified
+        //to avoid this behavior we can create copy of the values in the array using a method called slice
+        
+
+        //Destructuring 
+        const array3 = [1,2, 3];
+        //lets say we want to access the first and the second element. We can use array3[0] and array3[1]
+        //But we can use and even shorter property called "destructuring"
+        const [firstValue, secondValue] = [1,2, 3];
+        console.log(firstValue);
+        console.log(secondValue);
+        console.log("---------------------------");
+
+         //break --> lets us exit a loop early
+        //  for (let i=1; i<=10; i++)
+        //  {
+        //     console.log(i);
+        //     if (i===8)
+        //     {
+        //       break;
+        //     }
+        //  }
+
+         //continue lets us skip one(1) iteration
+         for (let i=1; i<=10; i++)
+         {
+            if(i===3)
+            {
+              continue;
+            }
+            console.log(i);
+            if (i===8)
+            {
+              break;
+            }
+         }
+    </script>
+  </body>
+</html>
+
+
+ 
