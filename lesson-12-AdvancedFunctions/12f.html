@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12f</title>
+</head>
+<body>
+    <button onclick="confirm()">Add to cart</button>
+    <p class="confirmation-msg"></p>
+    <script>
+        let timeoutId;
+        function confirm()
+        {
+            document.querySelector(".confirmation-msg").innerHTML = "Added";
+            clearTimeout(timeoutId);
+            
+            timeoutId = setTimeout(function()
+            {
+            document.querySelector(".confirmation-msg")
+            .innerHTML = ""}, 2000);
+        }
+    </script>
+</body>
+</html>
