@@ -7,7 +7,19 @@
 
 </head >
   <body>
+    <button onclick="" class="js-button">Click</button>
     <script>
+      // add event listener allows us add multiple listeners for an event
+      const buttonElement =  document.querySelector('.js-button');
+      buttonElement.addEventListener("click", ()=>{
+        console.log("Click");
+      });
+      const eventListener = () =>{
+        console.log("click2");
+      }
+      buttonElement.addEventListener("click", eventListener);
+      //we can remove event listeners
+      buttonElement.removeEventListener("click", eventListener);
         // function greeting()
         // {
         //     console.log("hello");
@@ -50,22 +62,61 @@
     // })
 
     //setTimeOut
-    setTimeout(function() 
+    // setTimeout(function() 
+    // {
+    // console.log("timeout")
+    // }, 3000);
+
+    // console.log("next line");
+
+    // // setInterval
+    // setInterval(function()
+    // {
+    // console.log("interval")
+    // }, 3000);
+
+    /*
+    const regularFunction =  function(param, param2) 
     {
-    console.log("timeout")
-    }, 3000);
+      console.log("hello");
+      return 5;
+    };
+    // arrow functions
+    const arrowFunction =  (param, param2) => {
+      console.log("hello");
+      return 5;
+    };
+    arrowFunction();
 
-    console.log("next line");
+    /*some short cuts in arrow functions: consider the arrow function below*/
+    // const oneParam = (param) => {
+    //     console.log(param+1);
+    // }
+    // oneParam(2);
 
-    // setInterval
-    setInterval(function()
-    {
-    console.log("interval")
-    }, 3000);
+    /*if an arrow function has only one parameter, we can just remove the brackets around the paramter*/
+    // const oneParam = param  =>
+    // {
+    //   console.log(++param);
+    // };
+    // oneParam(5);
 
+
+    /*one line arrow function*/
+    // const oneline = () => 2+33;
+    // console.log(oneline());
+
+    // const object2 = {
+    //   method: () =>{
+
+    //   },
+    //   // shorthand method syntax
+    //   method() {
+
+    //   }
+    // }
+  
     </script>
   </body>
 </html>
 
-
- 
