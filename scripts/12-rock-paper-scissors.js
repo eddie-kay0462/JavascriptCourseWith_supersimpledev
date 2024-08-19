@@ -10,11 +10,13 @@ updateScoreElement();
 
 let isautoplaying = false;
 let intervalID;
+
+
 function autoplay()
 {
     if (!isautoplaying)
     {
-        intervalID = setInterval(function()
+        intervalID = setInterval(() =>
         {
             const playerMove = pickComputerMove();
             playGame(playerMove);
@@ -25,7 +27,6 @@ function autoplay()
         clearInterval(intervalID);
         isautoplaying = false;
     }
-   
     
 }
 function playGame(playerMove)
