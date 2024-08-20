@@ -134,8 +134,6 @@ const computerMove = pickComputerMove();
   <img src="/lesson-10/images/${computerMove}-emoji.png" alt="" class="move-icon"> Computer`
   // localStorage.setItem('message', 'hello');
   localStorage.setItem('score_', JSON.stringify(score));
-//         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-// Wins: ${score.wins} Losses:${score.losses} Ties: ${score.ties}`)
 };
 
 
