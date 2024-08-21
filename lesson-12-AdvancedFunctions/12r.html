@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors v12</title>
+  <link rel="stylesheet" href="12r.css">
+</head>
+
+<body>
+  <p class="title">Rock Paper Scissors</p>
+  <!-- <!- case for rock --> 
+  <button class="move-btn js-rock-button"><img src="/lesson-10/images/rock-emoji.png" alt="" class="move-icon"></button>
+    <!-- case for the paper -->
+  <button class="move-btn js-paper-button"><img src="/lesson-10/images/paper-emoji.png" alt="" class="move-icon"></button>
+  <!-- case for scissors -->
+  <button 
+  class="move-btn js-scissors-button"><img src="/lesson-10/images/scissors-emoji.png" alt="" class="move-icon"></button>
+
+  <p class="js-result result"></p>
+  <p class="js-moves"></p>
+  <p class="js-score score"></p>
+  <button onclick="
+    score.wins = 0;
+    score.losses =0;
+    score.ties = 0;
+    localStorage.removeItem('score_');
+    updateScoreElement();
+  " class="reset-score-btn">Reset Score</button>
+  <button class="auto-play-button" onclick="autoplay()">AutoPlay</button> 
+  <!-- end, js begins -->
+  <script src="12r.js"></script>
+   <!-- <script>
+    [
+      "make dinner", "wash dishes", "watch youtube"
+    ].forEach(function(value, index) {
+      console.log(value, index)
+;    }); -->
+   </script>
+</body>
+ 
+</html>
